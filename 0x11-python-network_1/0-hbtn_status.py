@@ -1,14 +1,17 @@
 #!/usr/bin/python3
-"""fetches https://intranet.hbtn.io/status"""
+"""
+Module to fetch and display the body response of a URL using urllib.
+"""
 
 import urllib.request
-import urllib.parse
-
 
 if __name__ == "__main__":
-    with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
-        html = response.read()
-        print('Body response:')
-        print('\t- type:', type(html))
-        print('\t- content:', html)
-        print('\t- utf8 content:', html.decode('UTF-8'))
+    url = 'https://alx-intranet.hbtn.io/status'
+
+    with urllib.request.urlopen(url) as response:
+        body = response.read()
+
+    print("Body response:")
+    print("\t- type:", type(body))
+    print("\t- content:", body)
+    print("\t- utf8 content:", body.decode('utf-8'))
