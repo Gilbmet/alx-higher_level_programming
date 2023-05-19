@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module to send a POST request to a URL with an email parameter and 
+Module to send a POST request to a URL with an email parameter and
 display the body of the response.
 """
 
